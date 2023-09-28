@@ -1,0 +1,31 @@
+version: "2.4"
+
+################################################################################
+
+services:
+  tetris:
+    image: pytorch-gpu
+    hostname: Tetris
+    privileged: true
+    devices:
+      - /dev/input:/dev/input
+    environment:
+      # Display X Server GUI.
+      - DISPLAY=${DISPLAY}
+      - QT_X11_NO_MITSHM=1
+    build:
+      context: ${PWD}/src
+      dockerfile: ${PWD}/Dockerfile
+    shm_size: '8gb'
+    volumes:
+      # Map repository sources.
+      - ${PWD}/src:/root/src/
+      - ${PWD}/docker_scripts:/root/docker_scripts/
+      - ${PWD}/saved_models:/root/saved_models/
+      # device
+      - /dev/:/dev/
+      # Grant display access to X Server.
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      
+    network_mode: host
+    command: /bin/bash -c "tail -f /dev/null"
