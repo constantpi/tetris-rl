@@ -78,7 +78,7 @@ def train(opt, use_learned_model=False):
     criterion = nn.MSELoss()
 
     try:
-        foundation_num = int(input("Input foundation num:"))
+        foundation_num = int(input("Input the number of Ojama Blocks to stack in advance:"))
     except ValueError:
         foundation_num = 0
     state = env.reset(foundation_num)

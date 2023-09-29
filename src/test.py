@@ -48,7 +48,7 @@ def test(opt):
     model.eval()
     env = generate_wrapped_tetris()
     try:
-        foundation_num = int(input("Input foundation num:"))
+        foundation_num = int(input("Input the number of Ojama Blocks to stack in advance:"))
     except ValueError:
         foundation_num = 0
     env.reset(foundation_num)
