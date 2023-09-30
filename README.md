@@ -36,9 +36,10 @@ Dockerがインストールされていて、とdocker-composeコマンドが使
 lrは学習率(デフォルト0.001)、gammaは割引率(デフォルト0.8)、num_epochsは何epoch学習を回すか(デフォルト3000)です
 
 学習の様子は/root/saved_models/my_model/mean_scores.pngに保存されます。
-![image](https://github.com/constantpi/tetris-rl/assets/108005517/6af7801a-47e3-4ebd-936d-5b88380ce6b5)
-![image](https://github.com/constantpi/tetris-rl/assets/108005517/46364f9f-731b-468f-bde7-763cb2385f07)
+![image](https://github.com/constantpi/tetris-rl/assets/108005517/b2a4ea2d-5646-479e-8f0e-8e029a95c792)
+![image](https://github.com/constantpi/tetris-rl/assets/108005517/9f1cfcca-53b9-4f2d-9706-0b062d29325f)
 
+縦軸は直近の100epochにおけるゲームオーバーまでのスコアの平均で、横軸の1が100epochを表しています。
 
 # Author
 constantpi(https://github.com/constantpi/)
